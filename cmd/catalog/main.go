@@ -10,6 +10,8 @@ import (
 	"github.com/ivangeier/ig-commerce/ecommerce-api/internal/database"
 	"github.com/ivangeier/ig-commerce/ecommerce-api/internal/service"
 	"github.com/ivangeier/ig-commerce/ecommerce-api/internal/webserver"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
