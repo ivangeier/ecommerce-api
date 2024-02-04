@@ -5,8 +5,8 @@ import (
 )
 
 type Category struct {
-	ID   string
-	Name string
+	ID   string `json:"id"`
+	Name string `json:"name"`
 }
 
 func NewCategory(name string) *Category {
@@ -17,12 +17,12 @@ func NewCategory(name string) *Category {
 }
 
 type Product struct {
-	ID          string
-	Name        string
-	Description string
-	Price       float64
-	CategoryId  string
-	ImageURL    string
+	ID          string  `json:"id"`
+	Name        string  `json:"name"`
+	Description string  `json:"description"`
+	Price       float64 `json:"price"`
+	CategoryId  string  `json:"category_id"`
+	ImageURL    string  `json:"image_url"`
 }
 
 func NewProduct(name string, description string, price float64, categoryId string, imageURL string) *Product {

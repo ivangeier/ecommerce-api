@@ -37,8 +37,8 @@ func (ps *ProductService) GetProductByCategoryId(categoryId string) ([]*entity.P
 	return products, nil
 }
 
-func (ps *ProductService) CreateProduct(name string, description string, price float64, categoryId string, imageURL string) (*entity.Product, error) {
-	product := entity.NewProduct(name, description, price, categoryId, imageURL)
+func (ps *ProductService) CreateProduct(name string, description string, price float64, category_id string, image_url string) (*entity.Product, error) {
+	product := entity.NewProduct(name, description, price, category_id, image_url)
 	_, err := ps.ProductDB.CreateProduct(product)
 	if err != nil {
 		return nil, err
